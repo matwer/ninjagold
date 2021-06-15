@@ -11,11 +11,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ninja Gold</title>
 	<!-- bootstrap link -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="stylesheet" href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css" />
 </head>
 <body>
 	<div class="container p-5">
-		<h2 class="text-center">Ninja Gold!</h2>
+		<h2 class="text-center font-weight-bolder">Ninja Gold!</h2>
 		<div class="main bg-secondary text-white p-2">
 			<label>Your gold:</label>
 			<text><c:out value="${gold}"/>	
@@ -49,13 +49,16 @@
    					<button class="btn btn-warning">Find Gold</button>
   				</form>
   			</div>
-  			<textarea class="mt-5" cols="5" rows="10">
+  			<h3 class="text-center font-weight-bolder mt-5">Activities</h3>
+  			<textarea cols="5" rows="10">
   				<c:forEach var="item" items="${addGold}">
     				<c:out value="${item}"/>
 				</c:forEach>
   			</textarea>
 		</div> 
-	</div>		
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+	</div>
+	<script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/5.0.1/js/bootstrap.min.js"></script>		
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script> -->
 </body>
 </html>
